@@ -1,0 +1,4 @@
+/* problem */
+//type MyReturnType<T> = any;
+/* answer */
+type MyReturnType<T extends Function> = T extends (...args:any) => infer R ? R : never;
